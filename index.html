@@ -22,16 +22,21 @@
 
         .main-layout {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 30px;
-            margin: 20px auto;
-            max-width: 1200px;
+            justify-content: flex-start; /* Align the stats section to the left */
+            align-items: flex-start; /* Align items to the top */
+            gap: 40px; /* Space between stats and gallery */
+            margin: 20px auto; /* Centers the entire layout horizontally */
+            max-width: 1200px; /* Restrict total width for alignment */
+        }
+
+        .stats-container {
+            display: flex;
+            flex-direction: column; /* Stack the stats boxes vertically */
+            gap: 20px; /* Space between the stats boxes */
         }
 
         .stats {
-            flex: 0 0 250px;
-            margin-left: 5px;
+            flex: 0 0 250px; /* Fixed width for stats */
             background-color: #ececec;
             border: 1px solid #cec7a6;
             border-radius: 8px;
@@ -59,9 +64,8 @@
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            flex: 1;
+            justify-content: center; /* Center the images */
+            gap: 20px; /* Space between the images */
         }
 
         figure {
@@ -70,9 +74,9 @@
         }
 
         img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
+            max-width: 300px; /* Consistent size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
             border: 2px solid #ddd;
         }
 
@@ -82,38 +86,7 @@
             color: #555;
         }
 
-        .measurement-section {
-            margin: 20px auto 10px;
-            max-width: 600px; /* Centers the section and limits its width */
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .measurement-box {
-            background-color: #ececec;
-            border: 1px solid #cec7a6;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 1rem;
-            width: 80%; /* Keeps boxes smaller and centered */
-            max-width: 400px; /* Limits width to maintain compactness */
-        }
-
-        .measurement-box h2 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #444;
-            text-align: center;
-        }
-
-        .measurement-box p {
-            margin: 0.25rem 0;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
+        /* Footer */
         footer {
             text-align: center;
             padding: 1rem;
@@ -134,22 +107,26 @@
 
     <!-- Main Layout -->
     <div class="main-layout">
-        <!-- Attack Section -->
-        <section class="stats">
-            <h2>Dexter's Attack Statistics</h2>
-            <p><strong>Total Attacks:</strong> 1900</p>
-            <p><strong>Successful Attacks:</strong> 1846</p>
-            <p><strong>Failed Attacks:</strong> 10</p>
-            <p><strong>Success Rate:</strong> 99.7%</p>
-        </section>
+        <!-- Stats Section Container -->
+        <div class="stats-container">
+            <!-- Dexter's Stats -->
+            <section class="stats">
+                <h2>Dexter's Attack Statistics</h2>
+                <p><strong>Total Attacks:</strong> 1900</p>
+                <p><strong>Successful Attacks:</strong> 1846</p>
+                <p><strong>Failed Attacks:</strong> 10</p>
+                <p><strong>Success Rate:</strong> 99.7%</p>
+            </section>
 
-        <section class="stats">
-            <h2>Kitty's Defense Statistics</h2>
-            <p><strong>Total Defenses:</strong> 1500</p>
-            <p><strong>Successful Defenses:</strong> 2</p>
-            <p><strong>Failed Defenses:</strong> 1498</p>
-            <p><strong>Success Rate:</strong> 1%</p>
-        </section>
+            <!-- Kitty's Stats -->
+            <section class="stats">
+                <h2>Kitty's Defense Statistics</h2>
+                <p><strong>Total Defenses:</strong> 1500</p>
+                <p><strong>Successful Defenses:</strong> 2</p>
+                <p><strong>Failed Defenses:</strong> 1498</p>
+                <p><strong>Success Rate:</strong> 1%</p>
+            </section>
+        </div>
 
         <!-- Gallery Section -->
         <div class="gallery">
@@ -161,22 +138,6 @@
                 <img src="Images/KIT.jpg" alt="Kitty Yat">
                 <figcaption>Kitty Yat</figcaption>
             </figure>
-        </div>
-    </div>
-
-    <!-- Measurement Section -->
-    <div class="measurement-section">
-        <div class="measurement-box">
-            <h2>Kitty Measurements</h2>
-            <p><strong>Number of Toes:</strong> 5</p>
-            <p><strong>Eye Color:</strong> Green</p>
-            <p><strong>Body Type:</strong> Lean</p>
-        </div>
-        <div class="measurement-box">
-            <h2>Dexter Measurements</h2>
-            <p><strong>Number of Toes:</strong> 6</p>
-            <p><strong>Eye Color:</strong> Yellow</p>
-            <p><strong>Body Type:</strong> Muscular</p>
         </div>
     </div>
 
