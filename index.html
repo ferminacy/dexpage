@@ -86,6 +86,36 @@
             color: #555;
         }
 
+        .info-section {
+            margin: 20px auto; /* Centered and spaced below the gallery */
+            max-width: 640px; /* Matches the total width of the two images */
+            display: flex;
+            flex-direction: column; /* Stack the boxes vertically */
+            gap: 20px; /* Space between the boxes */
+        }
+
+        .info-box {
+            background-color: #ececec;
+            border: 1px solid #cec7a6;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            width: 100%; /* Ensure full width matching the gallery */
+        }
+
+        .info-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+            text-align: center;
+        }
+
+        .info-box p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -138,6 +168,22 @@
                 <img src="Images/KIT.jpg" alt="Kitty Yat">
                 <figcaption>Kitty Yat</figcaption>
             </figure>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <!-- First Info Box -->
+        <div class="info-box">
+            <h2>Interesting Facts</h2>
+            <p>Dexter and Kitty love to chase each other around the house.</p>
+            <p>Dexter is known for his sneak attacks, while Kitty relies on her agility.</p>
+        </div>
+
+        <!-- Second Info Box -->
+        <div class="info-box">
+            <h2>About Their Favorite Spots</h2>
+            <p>Dexter loves lounging on the bed, and Kitty prefers basking in the sun on the porch.</p>
         </div>
     </div>
 
