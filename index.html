@@ -63,7 +63,6 @@
 
         .gallery {
             display: flex;
-            flex-wrap: nowrap; /* Keep photos on one line */
             justify-content: center; /* Center the images horizontally */
             gap: 20px; /* Space between the images */
         }
@@ -88,14 +87,14 @@
 
         /* Measurements Section */
         .measurements-container {
-            width: 640px; /* Match width of two cat photos + gap */
-            margin: 15px auto 0; /* 15px below the gallery */
             display: flex;
-            flex-direction: column;
-            gap: 20px; /* Space between the measurement boxes */
+            justify-content: center; /* Center align */
+            gap: 20px; /* Space between the two boxes */
+            margin: 15px auto 0;
         }
 
         .measurements-box {
+            width: 300px; /* Fixed width to match the images */
             background-color: #f9f9f9;
             border: 1px solid #cec7a6;
             border-radius: 8px;
@@ -173,20 +172,20 @@
 
     <!-- Measurements Section -->
     <div class="measurements-container">
-        <!-- Kitty Measurements -->
-        <div class="measurements-box">
-            <h2>Kitty Measurements</h2>
-            <p><strong>Number of Toes:</strong> 5</p>
-            <p><strong>Eye Color:</strong> Green</p>
-            <p><strong>Body Type:</strong> Lean</p>
-        </div>
-
         <!-- Dexter Measurements -->
         <div class="measurements-box">
             <h2>Dexter Measurements</h2>
             <p><strong>Number of Toes:</strong> 6</p>
             <p><strong>Eye Color:</strong> Yellow</p>
             <p><strong>Body Type:</strong> Muscular</p>
+        </div>
+
+        <!-- Kitty Measurements -->
+        <div class="measurements-box">
+            <h2>Kitty Measurements</h2>
+            <p><strong>Number of Toes:</strong> 5</p>
+            <p><strong>Eye Color:</strong> Green</p>
+            <p><strong>Body Type:</strong> Lean</p>
         </div>
     </div>
 
