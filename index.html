@@ -21,14 +21,22 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 1rem;
+            gap: 20px; /* Space between the images */
+            margin: 20px 0;
         }
-        .gallery img {
-            margin: 0.5rem;
+        figure {
+            text-align: center;
+        }
+        img {
+            max-width: 300px; /* Set a max width for consistency */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Optional: Rounded corners */
             border: 2px solid #ddd;
-            border-radius: 8px;
-            max-width: 200px;
-            height: auto;
+        }
+        figcaption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
         }
         footer {
             text-align: center;
@@ -48,48 +56,21 @@
     </header>
 
     <div class="gallery">
-        <figure class="center">
+        <figure>
             <img src="Images/Dex1.jpg" alt="Dexter Yat">
             <figcaption>Dexter Yat!</figcaption>
         </figure>
-    </div>
-
-    <div class="gallery">
-        <figure class="center">
+        <figure>
             <img src="Images/KIT.jpg" alt="Kitty Yat">
             <figcaption>Kitty Yat!</figcaption>
         </figure>
     </div>
-    <style>
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Space between the images */
-            margin: 20px 0;
-        }
-    
-        figure {
-            text-align: center;
-        }
-    
-        img {
-            max-width: 300px; /* Set a max width for consistency */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 8px; /* Optional: Rounded corners */
-        }
-    
-        figcaption {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #555;
-        }
-    </style>
-    
-    
-
 
     <footer>
         <p>© 2024 Dexter and Kitty Page</p>
     </footer>
 </body>
 </html>
+
+    
+    
