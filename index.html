@@ -25,20 +25,20 @@ header {
     text-align: center;
 }
 
+
 .main-layout {
     display: flex;
-    justify-content: flex-start; /* Aligns items horizontally, starting from the left */
-    align-items: flex-start; /* Aligns items vertically at the top */
-    gap: 200px; /* Adjusts the space between the stats and the gallery */
-    margin: 15px auto; /* Adds 15px space above and below the layout */
-    max-width: 1200px; /* Restricts the layout's total width */
-    flex: 1; /* Pushes the footer to the bottom */
-    padding: 0 15px; /* Adds padding of 15px to the left and right */
+    align-items: flex-start; /* Aligns stats and gallery to the top */
+    gap: 20px; /* Adjusts the space between stats and gallery */
+    margin-top: 15px; /* Adds 15px space below the header */
+    padding: 0 15px; /* Ensures the entire layout has 15px padding from the sides */
+    max-width: 100%; /* Uses full width of the screen */
 }
 
 .stats {
-    flex: 0 0 250px; /* Fixes the stats section width at 250px */
-    margin: 0; /* Removes unnecessary margin to align it flush to the top and left */
+    flex: 0 0 250px; /* Fixes the stats section width to 250px */
+    margin: 0; /* Removes any additional margins */
+    margin-top: 15px; /* Adds 15px space below the header */
     background-color: #ececec;
     border: 1px solid #cec7a6;
     border-radius: 8px;
@@ -48,11 +48,22 @@ header {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* Allows images to wrap to the next row if needed */
-    justify-content: center; /* Centers the images in the available space */
-    gap: 20px; /* Evenly spaces images */
-    flex: 1; /* Makes the gallery fill the remaining space */
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Centers the images vertically relative to the stats */
+    flex: 1; /* Makes the gallery take up all remaining space */
+    gap: 20px; /* Adds spacing between the images */
 }
+
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    max-width: 300px; /* Ensures consistent image size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Adds rounded corners */
+    border: 2px solid #ddd;
 
 
 .stats h2 {
@@ -70,18 +81,6 @@ header {
 
 .stats strong {
     color: #222;
-}
-
-figure {
-    text-align: center;
-    margin: 0;
-}
-
-img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid #ddd;
 }
 
 figcaption {
