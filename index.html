@@ -56,13 +56,15 @@
         }
 
         /* Gallery Section */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            flex: 1; /* Gallery takes the remaining space */
-        }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; /* Center the images horizontally */
+        align-items: center; /* Center the images vertically within the space */
+        margin: 0 auto; /* Optional: Adds horizontal centering */
+    }
+
 
         figure {
             text-align: center;
