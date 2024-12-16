@@ -22,21 +22,21 @@
 
         .main-layout {
             display: flex;
-            justify-content: flex-start; /* Align the stats section to the left */
-            align-items: flex-start; /* Align items to the top */
-            gap: 40px; /* Space between stats and gallery */
-            margin: 20px auto; /* Centers the entire layout horizontally */
-            max-width: 1200px; /* Restrict total width for alignment */
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
         .stats-container {
             display: flex;
-            flex-direction: column; /* Stack the stats boxes vertically */
-            gap: 20px; /* Space between the stats boxes */
+            flex-direction: column;
+            gap: 20px;
         }
 
         .stats {
-            flex: 0 0 250px; /* Fixed width for stats */
+            flex: 0 0 250px;
             background-color: #ececec;
             border: 1px solid #cec7a6;
             border-radius: 8px;
@@ -61,10 +61,17 @@
             color: #222;
         }
 
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
         .gallery {
             display: flex;
-            justify-content: center; /* Center the images horizontally */
-            gap: 20px; /* Space between the images */
+            justify-content: center;
+            gap: 20px;
         }
 
         figure {
@@ -73,9 +80,9 @@
         }
 
         img {
-            max-width: 300px; /* Consistent size */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 8px; /* Rounded corners */
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
             border: 2px solid #ddd;
         }
 
@@ -85,16 +92,15 @@
             color: #555;
         }
 
-        /* Measurements Section */
         .measurements-container {
             display: flex;
-            justify-content: center; /* Center align */
-            gap: 20px; /* Space between the two boxes */
-            margin: 15px auto 0;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
         }
 
         .measurements-box {
-            width: 300px; /* Fixed width to match the images */
+            width: 300px;
             background-color: #f9f9f9;
             border: 1px solid #cec7a6;
             border-radius: 8px;
@@ -115,7 +121,6 @@
             color: #555;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 1rem;
@@ -128,17 +133,13 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>Meet Dexter and Kitty</h1>
         <p>Pictures of Dexter, Kitty's #1 Attacker...</p>
     </header>
 
-    <!-- Main Layout -->
     <div class="main-layout">
-        <!-- Stats Section Container -->
         <div class="stats-container">
-            <!-- Dexter's Stats -->
             <section class="stats">
                 <h2>Dexter's Attack Statistics</h2>
                 <p><strong>Total Attacks:</strong> 1900</p>
@@ -146,8 +147,6 @@
                 <p><strong>Failed Attacks:</strong> 10</p>
                 <p><strong>Success Rate:</strong> 99.7%</p>
             </section>
-
-            <!-- Kitty's Stats -->
             <section class="stats">
                 <h2>Kitty's Defense Statistics</h2>
                 <p><strong>Total Defenses:</strong> 1500</p>
@@ -157,43 +156,37 @@
             </section>
         </div>
 
-        <!-- Gallery Section -->
-        <div class="gallery">
-            <figure>
-                <img src="Images/Dex1.jpg" alt="Dexter Yat">
-                <figcaption>Dexter Yat</figcaption>
-            </figure>
-            <figure>
-                <img src="Images/KIT.jpg" alt="Kitty Yat">
-                <figcaption>Kitty Yat</figcaption>
-            </figure>
+        <div class="gallery-container">
+            <div class="gallery">
+                <figure>
+                    <img src="Images/Dex1.jpg" alt="Dexter Yat">
+                    <figcaption>Dexter Yat</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/KIT.jpg" alt="Kitty Yat">
+                    <figcaption>Kitty Yat</figcaption>
+                </figure>
+            </div>
+
+            <div class="measurements-container">
+                <div class="measurements-box">
+                    <h2>Dexter Measurements</h2>
+                    <p><strong>Number of Toes:</strong> 6</p>
+                    <p><strong>Eye Color:</strong> Yellow</p>
+                    <p><strong>Body Type:</strong> Muscular</p>
+                </div>
+                <div class="measurements-box">
+                    <h2>Kitty Measurements</h2>
+                    <p><strong>Number of Toes:</strong> 5</p>
+                    <p><strong>Eye Color:</strong> Green</p>
+                    <p><strong>Body Type:</strong> Lean</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Measurements Section -->
-    <div class="measurements-container">
-        <!-- Dexter Measurements -->
-        <div class="measurements-box">
-            <h2>Dexter Measurements</h2>
-            <p><strong>Number of Toes:</strong> 6</p>
-            <p><strong>Eye Color:</strong> Yellow</p>
-            <p><strong>Body Type:</strong> Muscular</p>
-        </div>
-
-        <!-- Kitty Measurements -->
-        <div class="measurements-box">
-            <h2>Kitty Measurements</h2>
-            <p><strong>Number of Toes:</strong> 5</p>
-            <p><strong>Eye Color:</strong> Green</p>
-            <p><strong>Body Type:</strong> Lean</p>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
         <p>© 2024 Dexter and Kitty Page</p>
     </footer>
 </body>
 </html>
-
-
