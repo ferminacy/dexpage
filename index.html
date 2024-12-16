@@ -22,16 +22,16 @@
 
         .main-layout {
     display: flex;
-    justify-content: flex-start; /* Keeps the stats section aligned to the far left */
-    align-items: flex-start; /* Align items to the top */
-    gap: 70px; /* Increase the space between stats and gallery */
+    justify-content: flex-start; /* Aligns the stats section to the far left */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Space between stats and gallery */
     margin: 20px auto; /* Centers the entire layout horizontally */
-    max-width: 1200px; /* Ensures consistent alignment */
+    max-width: 1200px; /* Restrict total width for consistent alignment */
 }
 
 .stats {
     flex: 0 0 250px; /* Fixed width for stats */
-    margin-left: 5px; /* Adds padding from the edge of the page */
+    margin-left: 0; /* Remove extra space on the left */
     background-color: #ececec;
     border: 1px solid #cec7a6;
     border-radius: 8px;
@@ -42,9 +42,10 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers the images horizontally */
+    justify-content: center; /* Center the images horizontally */
     gap: 20px; /* Space between the images */
-    flex: 1; /* Ensures the gallery takes the remaining space */
+}
+
 
         .stats h2 {
             font-size: 1.5rem;
