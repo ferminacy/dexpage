@@ -22,12 +22,12 @@
 
         /* Main Layout */
         .main-layout {
-    display: flex;
-    justify-content: center; /* Centers the entire layout horizontally */
-    align-items: flex-start; /* Aligns the items to the top */
-    gap: 20px; /* Space between the stats and gallery */
-    margin: 0 auto; /* Ensures the layout is centered within the page */
-    max-width: 1200px; /* Optional: Limits the total width for better alignment */
+    display: grid; /* Use a grid for better control */
+    grid-template-columns: auto 1fr; /* First column for stats, second for gallery */
+    gap: 20px; /* Space between stats and gallery */
+    align-items: start; /* Align items to the top */
+    margin: 20px auto; /* Center the whole layout horizontally */
+    max-width: 1200px; /* Optional: Restrict maximum width for consistent centering */
 }
 
         /* Attack Statistics Section */
@@ -58,15 +58,12 @@
         }
 
         /* Gallery Section */
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center; /* Center the images horizontally */
-        align-items: center; /* Center the images vertically within the space */
-        margin: 0 auto; /* Optional: Adds horizontal centering */
-    }
-
+        .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers images within the gallery */
+    gap: 20px; /* Space between images */
+}
 
         figure {
             text-align: center;
