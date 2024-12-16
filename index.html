@@ -6,94 +6,97 @@
     <title>Dexter & Kitty</title>
     <style>
         /* Global Styles */
-        body {
-            font-family: Cambria, Cambria;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensure the body fills the viewport height */
-        }
+        
+body {
+    font-family: Cambria, Cambria;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
-        header {
-            background-color: #cec7a6;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
+header {
+    background-color: #cec7a6;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
 
-        .main-layout {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 40px;
-            margin: 20px auto;
-            max-width: 1200px;
-            flex: 1; /* Pushes the footer to the bottom */
-        }
+.main-layout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    flex: 1; /* Pushes the footer to the bottom */
+    padding: 0 20px; /* Add padding to avoid content touching the edges */
+}
 
-        .stats {
-            flex: 0 0 250px;
-            margin-left: 0;
-            background-color: #ececec;
-            border: 1px solid #cec7a6;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-        }
+.stats {
+    flex: 0 0 250px;
+    margin-left: 0;
+    background-color: #ececec;
+    border: 1px solid #cec7a6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
 
-        .stats h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #444;
-            text-align: center;
-        }
+.stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+    text-align: center;
+}
 
-        .stats p {
-            margin: 0.5rem 0;
-            font-size: 1rem;
-            color: #555;
-        }
+.stats p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+}
 
-        .stats strong {
-            color: #222;
-        }
+.stats strong {
+    color: #222;
+}
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-        figure {
-            text-align: center;
-            margin: 0;
-        }
+figure {
+    text-align: center;
+    margin: 0;
+}
 
-        img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            border: 2px solid #ddd;
-        }
+img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
 
-        figcaption {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #555;
-        }
+figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            width: 100%;
-            margin-top: auto; /* Push footer to the bottom if content is short */
-        }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom if content is short */
+}
     </style>
 </head>
 <body>
