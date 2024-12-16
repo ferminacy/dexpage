@@ -91,9 +91,15 @@
             display: flex;
             flex-direction: column;
             gap: 20px; /* Space between measurement boxes */
-            align-items: center; /* Center the measurement boxes */
+            align-items: center; /* Center the measurement boxes relative to cat photos */
             margin: 20px auto; /* Add vertical spacing */
-            max-width: 620px; /* Match the width of two images combined */
+        }
+
+        .measurements-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 620px; /* Match the width of the two cat photos */
         }
 
         .measurements-box {
@@ -103,7 +109,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 1rem;
             text-align: center;
-            width: 100%; /* Full width of the container */
         }
 
         .measurements-box h2 {
@@ -175,20 +180,22 @@
 
     <!-- Measurements Section -->
     <div class="measurements-container">
-        <!-- Kitty Measurements -->
-        <div class="measurements-box">
-            <h2>Kitty Measurements</h2>
-            <p><strong>Number of Toes:</strong> 5</p>
-            <p><strong>Eye Color:</strong> Green</p>
-            <p><strong>Body Type:</strong> Lean</p>
-        </div>
+        <div class="measurements-wrapper">
+            <!-- Kitty Measurements -->
+            <div class="measurements-box">
+                <h2>Kitty Measurements</h2>
+                <p><strong>Number of Toes:</strong> 5</p>
+                <p><strong>Eye Color:</strong> Green</p>
+                <p><strong>Body Type:</strong> Lean</p>
+            </div>
 
-        <!-- Dexter Measurements -->
-        <div class="measurements-box">
-            <h2>Dexter Measurements</h2>
-            <p><strong>Number of Toes:</strong> 6</p>
-            <p><strong>Eye Color:</strong> Yellow</p>
-            <p><strong>Body Type:</strong> Muscular</p>
+            <!-- Dexter Measurements -->
+            <div class="measurements-box">
+                <h2>Dexter Measurements</h2>
+                <p><strong>Number of Toes:</strong> 6</p>
+                <p><strong>Eye Color:</strong> Yellow</p>
+                <p><strong>Body Type:</strong> Muscular</p>
+            </div>
         </div>
     </div>
 
