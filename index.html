@@ -19,13 +19,13 @@
         }
         .gallery {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 20px; /* Space between the images */
             margin: 20px 0;
         }
         figure {
             text-align: center;
+            margin: 0; /* Remove extra margins */
         }
         img {
             max-width: 300px; /* Set a max width for consistency */
@@ -50,14 +50,11 @@
     </style>
 </head>
 <body>
-
-#HEADER
     <header>
         <h1>Meet Dexter and Kitty!</h1>
         <p>Pictures of Dexter, Kitty's #1 Attacker...</p>
     </header>
 
-#GALLERY
     <div class="gallery">
         <figure>
             <img src="Images/Dex1.jpg" alt="Dexter Yat">
@@ -69,15 +66,6 @@
         </figure>
     </div>
 
-#ATTACK SECTION
-    <section class="stats">
-        <h2>Dexter's Attack Statistics</h2>
-        <p><strong>Total Attacks:</strong> 27</p>
-        <p><strong>Successful Attacks:</strong> 15</p>
-        <p><strong>Failed Attacks:</strong> 12</p>
-        <p><strong>Success Rate:</strong> 55.6%</p>
-    </section>
-#FOOTER
     <footer>
         <p>© 2024 Dexter and Kitty Page</p>
     </footer>
