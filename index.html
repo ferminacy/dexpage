@@ -24,33 +24,34 @@
         }
 
         .main-layout {
-            display: flex;
-            align-items: flex-start; /* Aligns stats and gallery to the top */
-            gap: 20px; /* Adjusts the space between stats and gallery */
-            margin-top: 15px; /* Adds 15px space below the header */
-            padding: 0 15px; /* Ensures the entire layout has 15px padding from the sides */
-            max-width: 100%; /* Uses full width of the screen */
-            flex: 1; /* Pushes the footer to the bottom */
-        }
+    display: flex;
+    align-items: flex-start; /* Aligns stats and gallery to the top */
+    gap: 20px; /* Adjusts the space between stats and gallery */
+    margin: 15px auto 0; /* Adds 15px space below the header */
+    padding: 0 15px; /* Ensures the entire layout has 15px padding from the sides */
+    max-width: 100%; /* Uses full width of the screen */
+    flex: 1; /* Pushes the footer to the bottom */
+}
 
-        .stats {
-            flex: 0 0 250px; /* Fixes the stats section width to 250px */
-            margin: 0; /* Removes any additional margins */
-            margin-top: 15px; /* Adds 15px space below the header */
-            background-color: #ececec;
-            border: 1px solid #cec7a6;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-        }
+.stats {
+    flex: 0 0 250px; /* Fixes the stats section width to 250px */
+    margin: 0; /* Removes unnecessary margins */
+    padding: 1rem;
+    background-color: #ececec;
+    border: 1px solid #cec7a6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        .gallery {
-            display: flex;
-            justify-content: center; /* Centers the images horizontally */
-            align-items: center; /* Centers the images vertically relative to the stats */
-            flex: 1; /* Makes the gallery take up all remaining space */
-            gap: 20px; /* Adds spacing between the images */
-        }
+.gallery {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: flex-start; /* Ensures the images align with the stats */
+    flex: 1; /* Makes the gallery take up all remaining space */
+    gap: 20px; /* Adds spacing between the images */
+    margin-top: 0; /* Ensures consistent alignment with the stats */
+}
+
 
         figure {
             text-align: center;
