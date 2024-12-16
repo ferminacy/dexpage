@@ -22,21 +22,21 @@
 
         .main-layout {
             display: flex;
-            justify-content: flex-start; /* Align the stats section to the left */
-            align-items: flex-start; /* Align items to the top */
-            gap: 40px; /* Space between stats and gallery */
-            margin: 20px auto; /* Centers the entire layout horizontally */
-            max-width: 1200px; /* Restrict total width for alignment */
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
         .stats-container {
             display: flex;
-            flex-direction: column; /* Stack the stats boxes vertically */
-            gap: 20px; /* Space between the stats boxes */
+            flex-direction: column;
+            gap: 20px;
         }
 
         .stats {
-            flex: 0 0 250px; /* Fixed width for stats */
+            flex: 0 0 250px;
             background-color: #ececec;
             border: 1px solid #cec7a6;
             border-radius: 8px;
@@ -63,9 +63,9 @@
 
         .gallery {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Center the images */
-            gap: 20px; /* Space between the images */
+            justify-content: center;
+            gap: 20px;
+            width: 100%; /* Ensures gallery spans available space */
         }
 
         figure {
@@ -74,9 +74,9 @@
         }
 
         img {
-            max-width: 300px; /* Consistent size */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 8px; /* Rounded corners */
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
             border: 2px solid #ddd;
         }
 
@@ -87,11 +87,12 @@
         }
 
         .info-section {
-            margin: 20px auto; /* Centered and spaced below the gallery */
-            max-width: 640px; /* Matches the total width of the two images */
+            margin: 20px auto;
+            max-width: calc(300px * 2 + 20px); /* Matches the combined width of the two images */
             display: flex;
-            flex-direction: column; /* Stack the boxes vertically */
-            gap: 20px; /* Space between the boxes */
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
         }
 
         .info-box {
@@ -100,7 +101,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 1rem;
-            width: calc(300px * 2 + 20px); /* Matches the combined width of the two images */
+            width: 100%; /* Matches the combined width of the two images */
         }
 
         .info-box h2 {
@@ -137,9 +138,8 @@
 
     <!-- Main Layout -->
     <div class="main-layout">
-        <!-- Stats Section Container -->
+        <!-- Stats Section -->
         <div class="stats-container">
-            <!-- Dexter's Stats -->
             <section class="stats">
                 <h2>Dexter's Attack Statistics</h2>
                 <p><strong>Total Attacks:</strong> 1900</p>
@@ -147,8 +147,6 @@
                 <p><strong>Failed Attacks:</strong> 10</p>
                 <p><strong>Success Rate:</strong> 99.7%</p>
             </section>
-
-            <!-- Kitty's Stats -->
             <section class="stats">
                 <h2>Kitty's Defense Statistics</h2>
                 <p><strong>Total Defenses:</strong> 1500</p>
@@ -173,14 +171,11 @@
 
     <!-- Info Section -->
     <div class="info-section">
-        <!-- First Info Box -->
         <div class="info-box">
             <h2>Interesting Facts</h2>
             <p>Dexter and Kitty love to chase each other around the house.</p>
             <p>Dexter is known for his sneak attacks, while Kitty relies on her agility.</p>
         </div>
-
-        <!-- Second Info Box -->
         <div class="info-box">
             <h2>About Their Favorite Spots</h2>
             <p>Dexter loves lounging on the bed, and Kitty prefers basking in the sun on the porch.</p>
@@ -193,4 +188,3 @@
     </footer>
 </body>
 </html>
-
