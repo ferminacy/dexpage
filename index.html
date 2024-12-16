@@ -18,16 +18,14 @@
             color: white;
             padding: 1rem;
             text-align: center;
-            width: 100%;
-            box-sizing: border-box; /* Includes padding in width calculation */
         }
 
         .main-layout {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: flex-start; /* Align the stats section to the left */
+            align-items: flex-start; /* Align items to the top */
             gap: 40px; /* Space between stats and gallery */
-            margin: 20px auto;
+            margin: 20px auto; /* Centers the entire layout horizontally */
             max-width: 1200px; /* Restrict total width for alignment */
         }
 
@@ -88,30 +86,33 @@
             color: #555;
         }
 
+        /* Measurements Section */
         .measurements-container {
-            max-width: 1200px;
-            margin: 20px auto;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 20px; /* Space between measurement boxes */
+            align-items: center; /* Center the measurement boxes */
+            margin: 20px auto; /* Add vertical spacing */
+            max-width: 620px; /* Match the width of two images combined */
         }
 
-        .measurements {
-            background-color: #ececec;
+        .measurements-box {
+            background-color: #f9f9f9;
             border: 1px solid #cec7a6;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 1rem;
             text-align: center;
+            width: 100%; /* Full width of the container */
         }
 
-        .measurements h3 {
-            font-size: 1.2rem;
+        .measurements-box h2 {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #444;
         }
 
-        .measurements p {
+        .measurements-box p {
             margin: 0.5rem 0;
             font-size: 1rem;
             color: #555;
@@ -126,33 +127,6 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .main-layout {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
-
-            .stats-container {
-                width: 100%;
-                align-items: center;
-            }
-
-            .stats {
-                width: auto;
-            }
-
-            .gallery {
-                width: 100%;
-                justify-content: center;
-            }
-
-            header {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
@@ -201,14 +175,17 @@
 
     <!-- Measurements Section -->
     <div class="measurements-container">
-        <div class="measurements">
-            <h3>Kitty Measurements</h3>
+        <!-- Kitty Measurements -->
+        <div class="measurements-box">
+            <h2>Kitty Measurements</h2>
             <p><strong>Number of Toes:</strong> 5</p>
             <p><strong>Eye Color:</strong> Green</p>
             <p><strong>Body Type:</strong> Lean</p>
         </div>
-        <div class="measurements">
-            <h3>Dexter Measurements</h3>
+
+        <!-- Dexter Measurements -->
+        <div class="measurements-box">
+            <h2>Dexter Measurements</h2>
             <p><strong>Number of Toes:</strong> 6</p>
             <p><strong>Eye Color:</strong> Yellow</p>
             <p><strong>Body Type:</strong> Muscular</p>
