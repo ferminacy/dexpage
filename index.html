@@ -7,13 +7,10 @@
     <style>
         /* Global Styles */
         body {
+            font-family: Cambria, Cambria;
             margin: 0;
             padding: 0;
-            font-family: Cambria, Cambria;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures the body fills the viewport height */
-            overflow-x: hidden; /* Prevents horizontal scrolling */
+            background-color: #f5f5f5;
         }
 
         header {
@@ -24,34 +21,52 @@
         }
 
         .main-layout {
-    display: flex;
-    align-items: flex-start; /* Aligns stats and gallery to the top */
-    gap: 20px; /* Adjusts the space between stats and gallery */
-    margin: 15px auto 0; /* Adds 15px space below the header */
-    padding: 0 15px; /* Ensures the entire layout has 15px padding from the sides */
-    max-width: 100%; /* Uses full width of the screen */
-    flex: 1; /* Pushes the footer to the bottom */
-}
+            display: flex;
+            justify-content: flex-start; /* Align the stats section to the left */
+            align-items: flex-start; /* Align items to the top */
+            gap: 40px; /* Space between stats and gallery */
+            margin: 20px auto; /* Centers the entire layout horizontally */
+            max-width: 1200px; /* Restrict total width for alignment */
+        }
 
-.stats {
-    flex: 0 0 250px; /* Fixes the stats section width to 250px */
-    margin: 0; /* Removes unnecessary margins */
-    padding: 1rem;
-    background-color: #ececec;
-    border: 1px solid #cec7a6;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        .stats-container {
+            display: flex;
+            flex-direction: column; /* Stack the stats boxes vertically */
+            gap: 20px; /* Space between the stats boxes */
+        }
 
-.gallery {
-    display: flex;
-    justify-content: center; /* Centers the images horizontally */
-    align-items: flex-start; /* Ensures the images align with the stats */
-    flex: 1; /* Makes the gallery take up all remaining space */
-    gap: 20px; /* Adds spacing between the images */
-    margin-top: 0; /* Ensures consistent alignment with the stats */
-}
+        .stats {
+            flex: 0 0 250px; /* Fixed width for stats */
+            background-color: #ececec;
+            border: 1px solid #cec7a6;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
 
+        .stats h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+            text-align: center;
+        }
+
+        .stats p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .stats strong {
+            color: #222;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the images */
+            gap: 20px; /* Space between the images */
+        }
 
         figure {
             text-align: center;
@@ -59,19 +74,27 @@
         }
 
         img {
-            max-width: 300px; /* Ensures consistent image size */
-            height: auto; /* Maintains aspect ratio */
-            border-radius: 8px; /* Adds rounded corners */
+            max-width: 300px; /* Consistent size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
             border: 2px solid #ddd;
         }
 
+        figcaption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 1rem;
             background-color: #333;
             color: white;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            margin-top: auto; /* Pushes the footer to the bottom of the page */
         }
     </style>
 </head>
@@ -84,23 +107,26 @@
 
     <!-- Main Layout -->
     <div class="main-layout">
-        <!-- Stats Section -->
-        <section class="stats">
-            <h2>Dexter's Attack Statistics</h2>
-            <p><strong>Total Attacks:</strong> 1900</p>
-            <p><strong>Successful Attacks:</strong> 1846</p>
-            <p><strong>Failed Attacks:</strong> 10</p>
-            <p><strong>Success Rate:</strong> 99.7%</p>
-        </section>
+        <!-- Stats Section Container -->
+        <div class="stats-container">
+            <!-- Dexter's Stats -->
+            <section class="stats">
+                <h2>Dexter's Attack Statistics</h2>
+                <p><strong>Total Attacks:</strong> 1900</p>
+                <p><strong>Successful Attacks:</strong> 1846</p>
+                <p><strong>Failed Attacks:</strong> 10</p>
+                <p><strong>Success Rate:</strong> 99.7%</p>
+            </section>
 
-        <section class="stats">
-            <h2>Kitty's Defense Statistics</h2>
-            <p><strong>Total Defenses:</strong> 1500</p>
-            <p><strong>Successful Defenses:</strong> 2</p>
-            <p><strong>Failed Defenses:</strong> 1498</p>
-            <p><strong>Success Rate:</strong> 1%</p>
-        </section>
-
+            <!-- Kitty's Stats -->
+            <section class="stats">
+                <h2>Kitty's Defense Statistics</h2>
+                <p><strong>Total Defenses:</strong> 1500</p>
+                <p><strong>Successful Defenses:</strong> 2</p>
+                <p><strong>Failed Defenses:</strong> 1498</p>
+                <p><strong>Success Rate:</strong> 1%</p>
+            </section>
+        </div>
 
         <!-- Gallery Section -->
         <div class="gallery">
