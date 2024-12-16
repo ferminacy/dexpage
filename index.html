@@ -20,25 +20,31 @@
             text-align: center;
         }
 
-        /* Main Layout */
         .main-layout {
-    display: grid; /* Use a grid for better control */
-    grid-template-columns: auto 1fr; /* First column for stats, second for gallery */
-    gap: 20px; /* Space between stats and gallery */
-    align-items: start; /* Align items to the top */
-    margin: 20px auto; /* Center the whole layout horizontally */
-    max-width: 1200px; /* Optional: Restrict maximum width for consistent centering */
+    display: flex;
+    justify-content: flex-start; /* Keeps the stats section aligned to the far left */
+    align-items: flex-start; /* Align items to the top */
+    gap: 50px; /* Increase the space between stats and gallery */
+    margin: 20px auto; /* Centers the entire layout horizontally */
+    max-width: 1200px; /* Ensures consistent alignment */
 }
 
-        /* Attack Statistics Section */
-        .stats {
-            flex: 0 0 250px; /* Fixed width for the stats section */
-            background-color: #ececec;
-            border: 1px solid #cec7a6;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-        }
+.stats {
+    flex: 0 0 250px; /* Fixed width for stats */
+    margin-left: 20px; /* Adds padding from the edge of the page */
+    background-color: #ececec;
+    border: 1px solid #cec7a6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the images horizontally */
+    gap: 20px; /* Space between the images */
+    flex: 1; /* Ensures the gallery takes the remaining space */
 
         .stats h2 {
             font-size: 1.5rem;
@@ -57,12 +63,7 @@
             color: #222;
         }
 
-        /* Gallery Section */
-        .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers images within the gallery */
-    gap: 20px; /* Space between images */
+
 }
 
         figure {
