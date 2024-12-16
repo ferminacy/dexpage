@@ -90,19 +90,13 @@
         .measurements-container {
             display: flex;
             flex-direction: column;
+            align-items: center; /* Center the measurement boxes */
             gap: 20px; /* Space between measurement boxes */
-            align-items: center; /* Center the measurement boxes relative to cat photos */
             margin: 20px auto; /* Add vertical spacing */
         }
 
-        .measurements-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 620px; /* Match the width of the two cat photos */
-        }
-
         .measurements-box {
+            width: 620px; /* Match the width of the two cat photos combined */
             background-color: #f9f9f9;
             border: 1px solid #cec7a6;
             border-radius: 8px;
@@ -180,22 +174,20 @@
 
     <!-- Measurements Section -->
     <div class="measurements-container">
-        <div class="measurements-wrapper">
-            <!-- Kitty Measurements -->
-            <div class="measurements-box">
-                <h2>Kitty Measurements</h2>
-                <p><strong>Number of Toes:</strong> 5</p>
-                <p><strong>Eye Color:</strong> Green</p>
-                <p><strong>Body Type:</strong> Lean</p>
-            </div>
+        <!-- Kitty Measurements -->
+        <div class="measurements-box">
+            <h2>Kitty Measurements</h2>
+            <p><strong>Number of Toes:</strong> 5</p>
+            <p><strong>Eye Color:</strong> Green</p>
+            <p><strong>Body Type:</strong> Lean</p>
+        </div>
 
-            <!-- Dexter Measurements -->
-            <div class="measurements-box">
-                <h2>Dexter Measurements</h2>
-                <p><strong>Number of Toes:</strong> 6</p>
-                <p><strong>Eye Color:</strong> Yellow</p>
-                <p><strong>Body Type:</strong> Muscular</p>
-            </div>
+        <!-- Dexter Measurements -->
+        <div class="measurements-box">
+            <h2>Dexter Measurements</h2>
+            <p><strong>Number of Toes:</strong> 6</p>
+            <p><strong>Eye Color:</strong> Yellow</p>
+            <p><strong>Body Type:</strong> Muscular</p>
         </div>
     </div>
 
