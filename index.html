@@ -27,24 +27,33 @@ header {
 
 .main-layout {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 280px;
-    margin: 15px auto;
-    max-width: 1200px;
+    justify-content: flex-start; /* Aligns items horizontally, starting from the left */
+    align-items: flex-start; /* Aligns items vertically at the top */
+    gap: 40px; /* Adjusts the space between the stats and the gallery */
+    margin: 15px auto; /* Adds 15px space above and below the layout */
+    max-width: 1200px; /* Restricts the layout's total width */
     flex: 1; /* Pushes the footer to the bottom */
-    padding: 0 5px; /* Add padding to avoid content touching the edges */
+    padding: 0 15px; /* Adds padding of 15px to the left and right */
 }
 
 .stats {
-    flex: 0 0 250px;
-    margin-left: 0;
+    flex: 0 0 250px; /* Fixes the stats section width at 250px */
+    margin: 0; /* Removes unnecessary margin to align it flush to the top and left */
     background-color: #ececec;
     border: 1px solid #cec7a6;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem;
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next row if needed */
+    justify-content: center; /* Centers the images in the available space */
+    gap: 20px; /* Evenly spaces images */
+    flex: 1; /* Makes the gallery fill the remaining space */
+}
+
 
 .stats h2 {
     font-size: 1.5rem;
@@ -61,13 +70,6 @@ header {
 
 .stats strong {
     color: #222;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 }
 
 figure {
