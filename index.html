@@ -19,19 +19,18 @@
             padding: 1rem;
             text-align: center;
         }
-
         .main-layout {
     display: flex;
-    justify-content: flex-start; /* Aligns the stats section to the far left */
-    align-items: flex-start; /* Aligns items to the top */
-    gap: 20px; /* Space between stats and gallery */
-    margin: 20px auto; /* Centers the entire layout horizontally */
-    max-width: 1200px; /* Restrict total width for consistent alignment */
+    justify-content: flex-start; /* Align the stats section to the left */
+    align-items: flex-start; /* Align items to the top */
+    gap: 40px; /* Space between stats and gallery */
+    margin: 20px auto; /* Center the entire layout horizontally */
+    max-width: 1200px; /* Restrict total width for alignment */
 }
 
 .stats {
     flex: 0 0 250px; /* Fixed width for stats */
-    margin-left: 0; /* Remove extra space on the left */
+    margin-left: 0; /* Removes unnecessary left margin */
     background-color: #ececec;
     border: 1px solid #cec7a6;
     border-radius: 8px;
@@ -42,9 +41,28 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the images horizontally */
-    gap: 20px; /* Space between the images */
+    justify-content: center; /* Center the images */
+    gap: 20px; /* Evenly space images */
 }
+
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    max-width: 300px; /* Consistent size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #ddd;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
 
 
         .stats h2 {
@@ -67,24 +85,7 @@
 
 }
 
-        figure {
-            text-align: center;
-            margin: 0;
-        }
-
-        img {
-            max-width: 300px; /* Consistent size */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 8px; /* Rounded corners */
-            border: 2px solid #ddd;
-        }
-
-        figcaption {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #555;
-        }
-
+        
         /* Footer */
         footer {
             text-align: center;
